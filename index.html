@@ -34,18 +34,35 @@
       }
 
       html {
+        width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
         scroll-behavior: auto;
         background: #fff;
       }
 
       body {
-        min-width: var(--canvas-width);
+        width: 100%;
+        min-width: 0;
         margin: 0;
-        overflow-x: auto;
+        overflow-x: hidden;
         background: #fff;
         color: var(--ink);
         font-family: var(--font-sans);
         -webkit-font-smoothing: antialiased;
+      }
+
+      .artboard-viewport {
+        position: relative;
+        width: 100vw;
+        max-width: 100vw;
+        height: var(--responsive-page-height, auto);
+        overflow: hidden;
+      }
+
+      .artboard-viewport > .canvas {
+        transform: scale(var(--responsive-scale, 1));
+        transform-origin: top left;
       }
 
       a {
@@ -693,8 +710,10 @@
         background: transparent;
       }
     </style>
+    <script src="responsive-artboard.js" defer></script>
   </head>
   <body>
+    <div class="artboard-viewport">
     <main id="top" class="canvas" aria-label="Khoa's creative works exhibition">
       <header>
         <h1 class="display-title" aria-label="creative works exhibition">
@@ -845,5 +864,6 @@
         </div>
       </footer>
     </main>
+    </div>
   </body>
 </html>
