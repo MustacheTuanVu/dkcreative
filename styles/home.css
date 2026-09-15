@@ -697,7 +697,7 @@
         width: 60px;
         height: 60px;
         margin-left: 7.58px;
-        transform: none;
+        transform: rotate(180deg);
         object-fit: fill;
       }
 
