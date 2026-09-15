@@ -1,0 +1,282 @@
+[
+  {
+    "i": 0,
+    "file": "assets/reference-extracted/video-motion/raw-0.png",
+    "type": "png",
+    "bytes": 5309,
+    "size": [
+      266,
+      262
+    ]
+  },
+  {
+    "i": 1,
+    "file": "assets/reference-extracted/video-motion/raw-1.png",
+    "type": "png",
+    "bytes": 5430,
+    "size": [
+      200,
+      190
+    ]
+  },
+  {
+    "i": 2,
+    "file": "assets/reference-extracted/video-motion/raw-2.png",
+    "type": "png",
+    "bytes": 6461,
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "i": 3,
+    "file": "assets/reference-extracted/video-motion/raw-3.png",
+    "type": "png",
+    "bytes": 3178,
+    "size": [
+      154,
+      154
+    ]
+  },
+  {
+    "i": 4,
+    "file": "assets/reference-extracted/video-motion/raw-4.png",
+    "type": "png",
+    "bytes": 3200,
+    "size": [
+      154,
+      154
+    ]
+  },
+  {
+    "i": 5,
+    "file": "assets/reference-extracted/video-motion/raw-5.png",
+    "type": "png",
+    "bytes": 817,
+    "size": [
+      256,
+      256
+    ]
+  },
+  {
+    "i": 6,
+    "file": "assets/reference-extracted/video-motion/raw-6.png",
+    "type": "png",
+    "bytes": 9652,
+    "size": [
+      266,
+      262
+    ]
+  },
+  {
+    "i": 7,
+    "file": "assets/reference-extracted/video-motion/raw-7.png",
+    "type": "png",
+    "bytes": 16057,
+    "size": [
+      200,
+      190
+    ]
+  },
+  {
+    "i": 8,
+    "file": "assets/reference-extracted/video-motion/raw-8.png",
+    "type": "png",
+    "bytes": 9954,
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "i": 9,
+    "file": "assets/reference-extracted/video-motion/raw-9.png",
+    "type": "png",
+    "bytes": 27685,
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "i": 10,
+    "file": "assets/reference-extracted/video-motion/raw-10.jpg",
+    "type": "jpg",
+    "bytes": 77901,
+    "size": [
+      998,
+      992
+    ]
+  },
+  {
+    "i": 11,
+    "file": "assets/reference-extracted/video-motion/raw-11.jpg",
+    "type": "jpg",
+    "bytes": 73800,
+    "size": [
+      720,
+      720
+    ]
+  },
+  {
+    "i": 12,
+    "file": "assets/reference-extracted/video-motion/raw-12.jpg",
+    "type": "jpg",
+    "bytes": 35002,
+    "size": [
+      720,
+      720
+    ]
+  },
+  {
+    "i": 13,
+    "file": "assets/reference-extracted/video-motion/raw-13.jpg",
+    "type": "jpg",
+    "bytes": 81919,
+    "size": [
+      1042,
+      1042
+    ]
+  },
+  {
+    "i": 14,
+    "file": "assets/reference-extracted/video-motion/raw-14.jpg",
+    "type": "jpg",
+    "bytes": 137552,
+    "size": [
+      1280,
+      1280
+    ]
+  },
+  {
+    "i": 15,
+    "file": "assets/reference-extracted/video-motion/raw-15.jpg",
+    "type": "jpg",
+    "bytes": 136837,
+    "size": [
+      1280,
+      1280
+    ]
+  },
+  {
+    "i": 16,
+    "file": "assets/reference-extracted/video-motion/raw-16.jpg",
+    "type": "jpg",
+    "bytes": 53965,
+    "size": [
+      720,
+      1280
+    ]
+  },
+  {
+    "i": 17,
+    "file": "assets/reference-extracted/video-motion/raw-17.jpg",
+    "type": "jpg",
+    "bytes": 53225,
+    "size": [
+      720,
+      1280
+    ]
+  },
+  {
+    "i": 18,
+    "file": "assets/reference-extracted/video-motion/raw-18.jpg",
+    "type": "jpg",
+    "bytes": 106639,
+    "size": [
+      720,
+      1280
+    ]
+  },
+  {
+    "i": 19,
+    "file": "assets/reference-extracted/video-motion/raw-19.jpg",
+    "type": "jpg",
+    "bytes": 43071,
+    "size": [
+      720,
+      1280
+    ]
+  },
+  {
+    "i": 20,
+    "file": "assets/reference-extracted/video-motion/raw-20.jpg",
+    "type": "jpg",
+    "bytes": 38933,
+    "size": [
+      720,
+      1280
+    ]
+  },
+  {
+    "i": 21,
+    "file": "assets/reference-extracted/video-motion/raw-21.jpg",
+    "type": "jpg",
+    "bytes": 74859,
+    "size": [
+      1280,
+      268
+    ]
+  },
+  {
+    "i": 22,
+    "file": "assets/reference-extracted/video-motion/raw-22.jpg",
+    "type": "jpg",
+    "bytes": 139165,
+    "size": [
+      720,
+      1280
+    ]
+  },
+  {
+    "i": 23,
+    "file": "assets/reference-extracted/video-motion/raw-23.jpg",
+    "type": "jpg",
+    "bytes": 189736,
+    "size": [
+      720,
+      1280
+    ]
+  },
+  {
+    "i": 24,
+    "file": "assets/reference-extracted/video-motion/raw-24.jpg",
+    "type": "jpg",
+    "bytes": 82832,
+    "size": [
+      720,
+      1280
+    ]
+  },
+  {
+    "i": 25,
+    "file": "assets/reference-extracted/video-motion/raw-25.png",
+    "type": "png",
+    "bytes": 1848,
+    "size": [
+      154,
+      154
+    ]
+  },
+  {
+    "i": 26,
+    "file": "assets/reference-extracted/video-motion/raw-26.png",
+    "type": "png",
+    "bytes": 1658,
+    "size": [
+      154,
+      154
+    ]
+  },
+  {
+    "i": 27,
+    "file": "assets/reference-extracted/video-motion/raw-27.png",
+    "type": "png",
+    "bytes": 1021,
+    "size": [
+      256,
+      256
+    ]
+  }
+]

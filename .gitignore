@@ -1,0 +1,8 @@
+# Generated visual verification artifacts
+artifacts/
+
+# Local development noise
+.DS_Store
+Thumbs.db
+node_modules/
+*.log

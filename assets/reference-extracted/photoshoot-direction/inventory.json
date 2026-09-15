@@ -1,0 +1,312 @@
+[
+  {
+    "i": 0,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-0.png",
+    "type": "png",
+    "bytes": 5309,
+    "size": [
+      266,
+      262
+    ]
+  },
+  {
+    "i": 1,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-1.png",
+    "type": "png",
+    "bytes": 5430,
+    "size": [
+      200,
+      190
+    ]
+  },
+  {
+    "i": 2,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-2.png",
+    "type": "png",
+    "bytes": 6461,
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "i": 3,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-3.png",
+    "type": "png",
+    "bytes": 5251,
+    "size": [
+      308,
+      308
+    ]
+  },
+  {
+    "i": 4,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-4.png",
+    "type": "png",
+    "bytes": 6329,
+    "size": [
+      256,
+      256
+    ]
+  },
+  {
+    "i": 5,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-5.png",
+    "type": "png",
+    "bytes": 7119,
+    "size": [
+      256,
+      256
+    ]
+  },
+  {
+    "i": 6,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-6.png",
+    "type": "png",
+    "bytes": 3178,
+    "size": [
+      154,
+      154
+    ]
+  },
+  {
+    "i": 7,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-7.png",
+    "type": "png",
+    "bytes": 3200,
+    "size": [
+      154,
+      154
+    ]
+  },
+  {
+    "i": 8,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-8.png",
+    "type": "png",
+    "bytes": 817,
+    "size": [
+      256,
+      256
+    ]
+  },
+  {
+    "i": 9,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-9.png",
+    "type": "png",
+    "bytes": 9652,
+    "size": [
+      266,
+      262
+    ]
+  },
+  {
+    "i": 10,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-10.png",
+    "type": "png",
+    "bytes": 16057,
+    "size": [
+      200,
+      190
+    ]
+  },
+  {
+    "i": 11,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-11.png",
+    "type": "png",
+    "bytes": 9954,
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "i": 12,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-12.png",
+    "type": "png",
+    "bytes": 27685,
+    "size": [
+      360,
+      360
+    ]
+  },
+  {
+    "i": 13,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-13.png",
+    "type": "png",
+    "bytes": 374,
+    "size": [
+      308,
+      308
+    ]
+  },
+  {
+    "i": 14,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-14.png",
+    "type": "png",
+    "bytes": 288,
+    "size": [
+      256,
+      256
+    ]
+  },
+  {
+    "i": 15,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-15.png",
+    "type": "png",
+    "bytes": 548667,
+    "size": [
+      736,
+      1104
+    ]
+  },
+  {
+    "i": 16,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-16.png",
+    "type": "png",
+    "bytes": 384298,
+    "size": [
+      840,
+      561
+    ]
+  },
+  {
+    "i": 17,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-17.png",
+    "type": "png",
+    "bytes": 334180,
+    "size": [
+      600,
+      727
+    ]
+  },
+  {
+    "i": 18,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-18.png",
+    "type": "png",
+    "bytes": 415675,
+    "size": [
+      840,
+      473
+    ]
+  },
+  {
+    "i": 19,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-19.png",
+    "type": "png",
+    "bytes": 483911,
+    "size": [
+      512,
+      768
+    ]
+  },
+  {
+    "i": 20,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-20.jpg",
+    "type": "jpg",
+    "bytes": 42221,
+    "size": [
+      399,
+      600
+    ]
+  },
+  {
+    "i": 21,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-21.png",
+    "type": "png",
+    "bytes": 288,
+    "size": [
+      256,
+      256
+    ]
+  },
+  {
+    "i": 22,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-22.jpg",
+    "type": "jpg",
+    "bytes": 7062264,
+    "size": [
+      4800,
+      3200
+    ]
+  },
+  {
+    "i": 23,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-23.png",
+    "type": "png",
+    "bytes": 1001502,
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "i": 24,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-24.jpg",
+    "type": "jpg",
+    "bytes": 33966,
+    "size": [
+      720,
+      720
+    ]
+  },
+  {
+    "i": 25,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-25.png",
+    "type": "png",
+    "bytes": 602347,
+    "size": [
+      972,
+      972
+    ]
+  },
+  {
+    "i": 26,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-26.jpg",
+    "type": "jpg",
+    "bytes": 37037,
+    "size": [
+      720,
+      720
+    ]
+  },
+  {
+    "i": 27,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-27.png",
+    "type": "png",
+    "bytes": 829856,
+    "size": [
+      972,
+      972
+    ]
+  },
+  {
+    "i": 28,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-28.png",
+    "type": "png",
+    "bytes": 1848,
+    "size": [
+      154,
+      154
+    ]
+  },
+  {
+    "i": 29,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-29.png",
+    "type": "png",
+    "bytes": 1658,
+    "size": [
+      154,
+      154
+    ]
+  },
+  {
+    "i": 30,
+    "file": "assets/reference-extracted/photoshoot-direction/raw-30.png",
+    "type": "png",
+    "bytes": 1021,
+    "size": [
+      256,
+      256
+    ]
+  }
+]

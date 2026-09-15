@@ -1,0 +1,12 @@
+{
+  "page": "dkcreative-home",
+  "source": "creative works exhibition - by Peter.svg",
+  "targetPixels": { "width": 1366, "height": 1464 },
+  "cssWidth": 1366,
+  "cssHeight": 1464,
+  "deviceScaleFactor": 1,
+  "capture": "viewport-only",
+  "browser": "Chromium headless",
+  "fonts": "SVG path geometry; no external font dependency",
+  "animations": "frozen"
+}
