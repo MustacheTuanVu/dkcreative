@@ -204,16 +204,36 @@ img { display: block; }
   font-weight: 400;
   line-height: 16px;
 }
-.space-card .burst {
+.space-card .nav-gear {
   position: absolute;
-  top: 23px;
-  right: 0;
-  width: 14px;
-  height: 14px;
-  font-size: 15px;
-  line-height: 14px;
-  text-align: center;
+  top: 19.42px;
+  width: 13.647px;
+  height: 13.647px;
+  z-index: 1;
+  color: #000;
+  background: currentColor;
+  clip-path: polygon(
+    40% 0, 60% 0, 63% 11%, 74% 15%, 84% 7%, 96% 21%,
+    87% 31%, 92% 43%, 100% 46%, 100% 62%, 88% 65%,
+    84% 78%, 94% 88%, 81% 100%, 70% 90%, 58% 94%, 55% 100%,
+    40% 100%, 38% 89%, 26% 86%, 15% 95%, 3% 82%, 12% 70%,
+    7% 59%, 0 56%, 0 40%, 12% 37%, 16% 25%, 6% 14%,
+    19% 3%, 30% 13%
+  );
 }
+.space-card .nav-gear::after {
+  content: '';
+  position: absolute;
+  top: 5.05px;
+  left: 5.05px;
+  width: 3.55px;
+  height: 3.55px;
+  border-radius: 50%;
+  background: var(--header-bg, #fff);
+}
+.space-card.space-i .nav-gear { right: -0.25px; }
+.space-card.space-ii .nav-gear { right: 0.2px; opacity: .6; }
+.space-card.space-iii .nav-gear { right: -0.12px; opacity: .6; }
 .space-i { top: 345px; left: 84px; width: 224px; }
 .space-i .space-art { top: -1px; left: -72px; width: 63px; height: 63px; }
 .space-ii { top: 345px; left: 417px; width: 264px; }
@@ -470,7 +490,6 @@ img { display: block; }
   width: 20px;
   height: 20px;
   object-fit: fill;
-  filter: invert(1);
 }
 .footer-row .label { margin-left: 9px; }
 .back-to-top {
@@ -486,7 +505,6 @@ img { display: block; }
   height: 60px;
   margin-left: 11px;
   object-fit: fill;
-  filter: invert(1);
 }
 .back-to-top span {
   position: relative;

@@ -21,6 +21,7 @@ export function SpaceNavigation({ active }: { active?: SpaceKey }) {
               <span className="space-title">{space.title}</span>
               <span className="space-status">{isCurrent ? 'you are here !' : 'now on view'}</span>
             </span>
+            {space.navGear ? <span className="nav-gear" aria-hidden="true" /> : null}
           </Link>
         );
       })}
