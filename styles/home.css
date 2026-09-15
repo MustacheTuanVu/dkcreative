@@ -1,0 +1,691 @@
+:root {
+        --ink: #000000;
+        --accent: #6c3c29;
+        --canvas-width: 1366px;
+        --canvas-height: 1464px;
+        --font-sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      }
+
+      @font-face {
+        font-family: "Baloo 2";
+        font-style: normal;
+        font-weight: 800;
+        src: url("/assets/fonts/display/baloo-2-800.ttf") format("truetype");
+      }
+
+      html {
+        width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+        scroll-behavior: auto;
+        background: #fff;
+      }
+
+      body {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        overflow-x: hidden;
+        background: #fff;
+        color: var(--ink);
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .artboard-viewport {
+        position: relative;
+        width: 100vw;
+        max-width: 100vw;
+        height: var(--responsive-page-height, auto);
+        overflow: hidden;
+      }
+
+      .artboard-viewport > .canvas {
+        transform: scale(var(--responsive-scale, 1));
+        transform-origin: top left;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .canvas {
+        position: relative;
+        width: var(--canvas-width);
+        height: var(--canvas-height);
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .display-title {
+        position: absolute;
+        top: 115px;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        font-family: "Baloo 2", Arial, sans-serif;
+        font-size: 56px;
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 56px;
+      }
+
+      .display-title span {
+        display: block;
+      }
+
+      .display-title > .title-line-one {
+        text-align: center;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .display-title > .title-line-one .title-glyph {
+        display: inline-block;
+        position: relative;
+        letter-spacing: 0;
+        margin-right: 0.25px;
+      }
+
+      .display-title > .title-line-one .title-glyph:nth-child(1) { top: 15.62px; }
+      .display-title > .title-line-one .title-glyph:nth-child(2) { top: 13.56px; }
+      .display-title > .title-line-one .title-glyph:nth-child(3) { top: 12.66px; }
+      .display-title > .title-line-one .title-glyph:nth-child(4) { top: 10.87px; }
+      .display-title > .title-line-one .title-glyph:nth-child(5) { top: 8.58px; }
+      .display-title > .title-line-one .title-glyph:nth-child(6) { top: 7.57px; }
+      .display-title > .title-line-one .title-glyph:nth-child(7) { top: 6.39px; }
+      .display-title > .title-line-one .title-glyph:nth-child(8) { top: 5.30px; }
+      .display-title > .title-line-one .title-glyph:nth-child(9) { top: 0; }
+      .display-title > .title-line-one .title-glyph:nth-child(10) { top: 2.37px; }
+      .display-title > .title-line-one .title-glyph:nth-child(11) { top: 0.27px; }
+      .display-title > .title-line-one .title-glyph:nth-child(12) { top: -0.40px; }
+      .display-title > .title-line-one .title-glyph:nth-child(13) { top: -3.13px; }
+      .display-title > .title-line-one .title-glyph:nth-child(14) { top: -4.62px; }
+
+      .display-title > .title-line-two {
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+
+      .intro {
+        position: absolute;
+        top: 234px;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+
+      .intro .update {
+        display: block;
+        font-style: normal;
+      }
+
+      .intro > span:first-child { letter-spacing: 0.2px; }
+      .intro .update { letter-spacing: 0.12px; }
+
+      .space-card {
+        position: absolute;
+        display: block;
+        height: 69px;
+        color: var(--ink);
+      }
+
+      .space-card .space-art {
+        position: absolute;
+        display: block;
+        object-fit: fill;
+      }
+
+      .space-card .space-copy {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        white-space: nowrap;
+      }
+
+      .space-card .space-name {
+        display: block;
+        font-size: 14.5px;
+        font-weight: 400;
+        line-height: 26px;
+      }
+
+      .space-card .space-title {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.15px;
+        line-height: 17px;
+      }
+
+      .space-card .space-status {
+        display: block;
+        position: relative;
+        top: 3px;
+        color: var(--accent);
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 16px;
+      }
+
+      .space-card .burst {
+        position: absolute;
+        top: 23px;
+        right: 0;
+        width: 14px;
+        height: 14px;
+        font-size: 15px;
+        line-height: 14px;
+        text-align: center;
+      }
+
+      .space-i {
+        top: 346px;
+        left: 84px;
+        width: 224px;
+      }
+
+      .space-i .space-art {
+        top: -1px;
+        left: -72px;
+        width: 63px;
+        height: 63px;
+      }
+
+      .space-ii {
+        top: 346px;
+        left: 417px;
+        width: 264px;
+      }
+
+      .space-ii .space-art {
+        top: 8px;
+        left: -64px;
+        width: 48px;
+        height: 46px;
+      }
+
+      .space-iii {
+        top: 346px;
+        left: 789px;
+        width: 265px;
+      }
+
+      .space-iii .space-art {
+        top: 8px;
+        left: -63px;
+        width: 45px;
+        height: 46px;
+      }
+
+      .space-iv {
+        top: 346px;
+        left: 1163px;
+        width: 184px;
+      }
+
+      .space-iv .space-art {
+        top: 2px;
+        left: -70px;
+        width: 57px;
+        height: 57px;
+      }
+
+      .portrait {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 353px;
+        height: 345px;
+        display: block;
+      }
+
+      .portrait-frame {
+        position: absolute;
+        top: 565px;
+        left: 20px;
+        width: 353px;
+        height: 345px;
+        overflow: hidden;
+      }
+
+      .profile-block {
+        position: absolute;
+        left: 408px;
+        width: 440px;
+      }
+
+      .profile-block h2,
+      .education-block h2,
+      .experience-block h2,
+      .software-block h2,
+      .shortcut-block h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 24px;
+      }
+
+      .about-block {
+        top: 564px;
+      }
+
+      .about-block h2 {
+        position: relative;
+        top: 2px;
+        transform: scaleX(0.99);
+        transform-origin: left center;
+      }
+
+      .about-copy {
+        position: absolute;
+        top: 39px;
+        left: 0;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+
+      .about-copy .paragraph {
+        display: block;
+        margin: 0 0 18px;
+      }
+
+      .about-copy .about-line {
+        display: block;
+        transform-origin: left center;
+      }
+      .about-line-1 { position: relative; top: -1px; transform: scaleX(1.012); }
+      .about-line-2 { transform: scaleX(1.03); }
+      .about-line-3 { transform: scaleX(1.035); }
+      .about-line-4 { transform: scaleX(1.038); }
+      .about-line-5 { transform: scaleX(1.049); }
+      .about-line-6 { transform: scaleX(1.032); }
+
+      .contact-row {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 20px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        white-space: nowrap;
+      }
+
+      .contact-row img {
+        display: block;
+        flex: 0 0 auto;
+        object-fit: fill;
+      }
+
+      .footer-contact img {
+        width: 18.9907px;
+        height: 18.9907px;
+      }
+
+      .footer-email img {
+        width: 19.9902px;
+        height: 19.9902px;
+      }
+
+      .contact-row .contact-label {
+        display: block;
+        margin-left: 9px;
+      }
+
+      .about-phone {
+        top: 204px;
+        left: -0.315px;
+      }
+
+      .about-phone .contact-label {
+        margin-left: 10px;
+        letter-spacing: 0.3px;
+      }
+
+      .about-phone img {
+        width: 18.9907px;
+        height: 18.9907px;
+      }
+
+      .about-email {
+        top: 202.366px;
+        left: 213.028px;
+      }
+
+      .about-email .contact-label {
+        margin-left: 8px;
+        letter-spacing: 0.8px;
+      }
+
+      .about-email img {
+        width: 19.9902px;
+        height: 19.9902px;
+      }
+
+      .education-block {
+        position: absolute;
+        top: 818px;
+        left: 408px;
+        width: 440px;
+      }
+
+      .education-list {
+        position: absolute;
+        top: 38px;
+        left: 0;
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .education-list .edu-row {
+        display: grid;
+        grid-template-columns: 88px auto;
+        min-height: 18px;
+      }
+
+      .education-list .degree {
+        grid-column: 2;
+        display: block;
+      }
+
+      .education-list strong,
+      .experience-list strong {
+        font-weight: 700;
+      }
+
+      .education-list .edu-row:first-child strong {
+        transform: scaleX(0.95);
+        transform-origin: left center;
+      }
+
+      .education-list .edu-row:nth-child(2) .degree {
+        position: relative;
+        left: -1px;
+        transform: scaleX(1.045);
+        transform-origin: left center;
+      }
+
+      .education-list .edu-row:nth-child(3) .degree {
+        position: relative;
+        left: -1px;
+        transform: scaleX(1.04);
+        transform-origin: left center;
+      }
+
+      .experience-block {
+        position: absolute;
+        top: 564px;
+        left: 968px;
+        width: 350px;
+      }
+
+      .experience-list {
+        position: absolute;
+        top: 37px;
+        left: 0;
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .experience-group {
+        height: 44px;
+        margin: 0 0 18px;
+      }
+
+      .experience-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .experience-row {
+        display: grid;
+        grid-template-columns: 77px auto;
+        height: 18px;
+        line-height: 18px;
+      }
+
+      .experience-row .date,
+      .experience-row .role {
+        display: block;
+      }
+
+      .experience-row .role {
+        grid-column: 2;
+        transform-origin: left center;
+      }
+
+      .experience-group:nth-child(1) .experience-row:nth-child(1) .role { transform: scaleX(0.955); }
+      .experience-group:nth-child(1) .experience-row:nth-child(2) .role { transform: scaleX(1.028); }
+      .experience-group:nth-child(2) .experience-row:nth-child(1) { position: relative; top: -1px; }
+      .experience-group:nth-child(2) .experience-row:nth-child(1) .role { transform: scaleX(0.939); }
+      .experience-group:nth-child(2) .experience-row:nth-child(2) .role { transform: scaleX(1.013); }
+      .experience-group:nth-child(3) .experience-row { position: relative; top: -1px; }
+      .experience-group:nth-child(3) .experience-row .role { position: relative; left: -1px; transform: scaleX(1.013); }
+      .experience-group:nth-child(3) .experience-row:nth-child(1) .role { transform: scaleX(0.985); }
+
+      .software-block {
+        position: absolute;
+        top: 795px;
+        left: 968px;
+        width: 350px;
+      }
+
+      .software-icons {
+        position: absolute;
+        top: 23px;
+        left: 0;
+        display: flex;
+        align-items: flex-start;
+        height: 91px;
+      }
+
+      .software-icons img {
+        position: absolute;
+        display: block;
+        object-fit: fill;
+        max-width: none;
+      }
+
+      .software-icons .ps {
+        top: 18px;
+        left: 0;
+        width: 57px;
+        height: 56px;
+      }
+
+      .software-icons .ai {
+        top: 18px;
+        left: 70px;
+        width: 56px;
+        height: 56px;
+      }
+
+      .software-icons .pr {
+        top: 18px;
+        left: 138px;
+        width: 57px;
+        height: 56px;
+      }
+
+      .software-icons .figma {
+        top: 0;
+        left: 190px;
+        width: 92px;
+        height: 92px;
+      }
+
+      .software-icons .capcut {
+        top: 18px;
+        left: 277px;
+        width: 56px;
+        height: 56px;
+      }
+
+      .clients {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .clients img {
+        position: absolute;
+        display: block;
+        object-fit: fill;
+      }
+
+      .client-knauf { left: 20px; top: 958px; width: 72px; height: 48px; }
+      .client-sony { left: 136px; top: 970px; width: 100px; height: 22px; }
+      .client-vita { left: 281px; top: 953px; width: 157px; height: 57px; }
+      .client-fpt { left: 483px; top: 948px; width: 159px; height: 67px; }
+      .client-uob { left: 688px; top: 966px; width: 107px; height: 33px; }
+      .client-rung { left: 840px; top: 932px; width: 108px; height: 108px; }
+      .client-baemin { left: 982px; top: 962px; width: 156px; height: 40px; }
+      .client-vng { left: 1172px; top: 968px; width: 173px; height: 27px; }
+
+      .call-block {
+        position: absolute;
+        top: 1176px;
+        left: 22px;
+      }
+
+      .call-block h2 {
+        margin: 0;
+        font-family: "Baloo 2", Arial, sans-serif;
+        font-size: 56px;
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 58px;
+      }
+
+      .call-line { display: block; }
+      .call-line-one { position: relative; top: -1px; letter-spacing: 0.25px; }
+      .call-line-two { position: relative; left: -3px; font-size: 52px; letter-spacing: 0.1px; transform: scale(1.08, 0.96); transform-origin: left center; }
+
+      .footer-contact {
+        position: absolute;
+        top: 115px;
+        left: -0.66px;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+      }
+
+      .footer-contact:not(.footer-email) .contact-label {
+        transform: scaleX(0.957);
+        transform-origin: left center;
+      }
+
+      .footer-email {
+        left: 229.376px;
+      }
+
+      .footer-email .contact-label {
+        margin-left: 8px;
+        transform: scaleX(1.011);
+        transform-origin: left center;
+      }
+
+      .shortcut-block {
+        position: absolute;
+        top: 1177px;
+        left: 0;
+        width: 100%;
+        height: 270px;
+      }
+
+      .shortcut-block h2 {
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        font-size: 22px;
+        line-height: 24px;
+        text-align: right;
+      }
+
+      .shortcut-list {
+        position: absolute;
+        top: 48px;
+        right: 19px;
+        width: 216px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: right;
+      }
+
+      .shortcut-list li {
+        position: relative;
+        height: 34px;
+        padding-right: 40px;
+        white-space: nowrap;
+      }
+
+      .shortcut-list li > a {
+        display: inline-block;
+        transform-origin: right center;
+      }
+      .shortcut-list li:nth-child(1) > a { transform: scaleX(1.008); }
+      .shortcut-list li:nth-child(2) > a { position: relative; top: 0; transform: scaleX(1.026); }
+      .shortcut-list li:nth-child(3) > a { position: relative; top: 1px; transform: scaleX(1.082); }
+      .shortcut-list li:nth-child(4) > a { position: relative; top: 2px; transform: scaleX(1.044); }
+
+      .shortcut-list .shortcut-art {
+        position: absolute;
+        right: auto;
+        display: block;
+        object-fit: fill;
+      }
+
+      .shortcut-list .shortcut-i { left: 187px; top: -8px; width: 35px; height: 36px; }
+      .shortcut-list .shortcut-ii { left: 192px; top: -2px; width: 25px; height: 24px; }
+      .shortcut-list .shortcut-iii { left: 192px; top: -2px; width: 25px; height: 25px; }
+      .shortcut-list .shortcut-iv { left: 188px; top: -5px; width: 32px; height: 32px; }
+
+      .back-to-top {
+        position: absolute;
+        top: 182.77px;
+        right: 19px;
+        width: 82px;
+        height: 84px;
+        text-align: center;
+      }
+
+      .back-to-top img {
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin-left: 7.58px;
+        transform: none;
+        object-fit: fill;
+      }
+
+      .back-to-top span {
+        position: relative;
+        left: -3px;
+        display: block;
+        margin-top: -14px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        white-space: nowrap;
+      }
+
+      .interactive-link:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+
+      .interactive-link:hover {
+        background: transparent;
+      }

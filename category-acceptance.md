@@ -1,38 +1,57 @@
-# Category pages acceptance record
+# DK Creative acceptance record
 
 ## Scope
 
-Implemented all four SVG references as semantic HTML/CSS pages under `/root/dự án coding/dkcreative/`. Reference SVGs remain measurement/evidence files; no category page uses a full-page SVG as an image or background.
+Converted the five-page DK Creative exhibition to a Next.js 16 App Router application with typed React components while preserving the existing 1366px artboards, local assets/fonts, navigation states, and proportional mobile scaling. Full-page reference SVGs remain measurement/evidence files; no runtime page uses a reference SVG as an image/background or copies its XML/path payload.
 
-## Entry points
+## Runtime entry points
 
-- `graphic-design.html` ← `graphic design.svg`
-- `video-motion.html` ← `video & motion.svg`
-- `photoshoot-direction.html` ← `photoshoot direction.svg`
-- `logo-brand-identity.html` ← `logo & brand identity.svg`
+- `/`
+- `/graphic-design`
+- `/video-motion`
+- `/photoshoot-direction`
+- `/logo-brand-identity`
 
-Homepage `index.html` now routes all four space cards to these HTML entries.
+## Build verification
+
+- `npm run typecheck`: PASS
+- `npm run build`: PASS; all five routes prerendered successfully
+- `next start` on `127.0.0.1:8931`: all five canonical route probes returned HTTP 200
+- Representative `/assets/raster-crops/space_i.png` and `/assets/fonts/display/baloo-2-800.ttf`: HTTP 200
 
 ## Visual comparison
 
-Chromium headless, viewport `1366px`, DPR `1`, full artboard, threshold `8`:
+Chromium headless, viewport `1366px`, DPR `1`, full artboard, threshold `8`; Next render compared to the existing reference target:
 
-| Page | Artboard | Changed pixels | Changed ratio | Mean absolute error | p95 | Gate |
-|---|---:|---:|---:|---:|---:|---|
-| Graphic design | 1366 × 5077 | 258,729 / 6,935,182 | 3.7307% | 2.8075 | 5 | PASS |
-| Video & motion | 1366 × 4282 | 300,503 / 5,849,212 | 5.1375% | 3.3321 | 9 | PASS |
-| Photoshoot direction | 1366 × 2777 | 210,711 / 3,793,382 | 5.5547% | 6.5984 | 15 | PASS |
-| Logo & brand identity | 1366 × 3193 | 202,451 / 4,361,638 | 4.6416% | 4.7937 | 7 | PASS |
+| Page | Artboard | Changed ratio | Mean absolute error | p95 | Gate |
+|---|---:|---:|---:|---:|---|
+| Graphic design | 1366 × 5077 | 3.7183% | 2.7967 | 5 | PASS |
+| Video & motion | 1366 × 4282 | 5.1573% | 3.3759 | 9 | PASS |
+| Photoshoot direction | 1366 × 2777 | 5.6174% | 6.7275 | 16 | PASS |
+| Logo & brand identity | 1366 × 3193 | 4.6816% | 4.8804 | 7 | PASS |
+
+Homepage migration comparison against the verified static responsive render:
+
+- Desktop `1366 × 1464`: changed ratio `0.00845%`
+- Mobile `390 × 900`: changed ratio `0.00627%`
 
 These are implementation comparison metrics, not a claim of pixel-identical 100% output.
 
-## Verification
+## Browser verification
 
-- `check-implementation.py`: PASS for all four entries; no violations.
-- `shot.mjs --verify --strict`: PASS for all four entries; `7` interactive controls, `0` dead, `0` warnings per page.
-- Local browser routing: all four pages return HTTP 200, expected `scrollHeight`, all page images loaded, `document.fonts.status = loaded`.
-- Asset parser: all local `src` references exist; no HTML page contains an SVG `src`/reference image.
+- Strict interaction audit: all five pages PASS; homepage `13` interactive controls, each category page `7`; `0` dead controls and `0` warnings.
+- Homepage images: `27/27`; Graphic: `19/19`; Video: `19/19`; Photoshoot: `22/22`; Logo: `18/18`.
+- Fonts: `document.fonts.status = loaded`.
+- At 390px: responsive scale `0.285505...`, stage width `390px`, document width `390px`, no horizontal overflow on all five routes.
+- Category active links expose `aria-current="page"` and correct clean route hrefs.
 
 ## Deployment
 
-Not deployed to `dk.coderkiemcom.com` in this change. Production remains the previously deployed homepage version until an explicit deploy request is given.
+Deployed and verified on production:
+
+- `dkcreative-site.service` runs `next start` from `/root/dkcreative-site` on `127.0.0.1:8901`.
+- `cloudflared-hermes-docs.service` remains active and continues to route the public hostname.
+- Public canonical routes `/`, `/graphic-design`, `/video-motion`, `/photoshoot-direction`, and `/logo-brand-identity` return HTTP `200` and Next-rendered HTML.
+- Public `.html` paths return HTTP `404`.
+- Public strict audit passes for all five canonical routes.
+- Production backup: `/root/dkcreative-site.backup-20260915-165642`.

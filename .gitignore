@@ -1,6 +1,11 @@
 # Generated visual verification artifacts
 artifacts/
 
+# Next.js generated output
+.next/
+out/
+*.tsbuildinfo
+
 # Local development noise
 .DS_Store
 Thumbs.db

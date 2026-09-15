@@ -1,25 +1,52 @@
 # DK Creative
 
-Static semantic HTML/CSS reconstruction of the DK Creative exhibition and its four category pages.
+Next.js App Router conversion of the DK Creative exhibition: one homepage plus four measured category artboards.
 
-## Pages
+The five canonical App Router pages are:
 
-- `index.html` — exhibition homepage
-- `graphic-design.html` — graphic design collection
-- `video-motion.html` — video and motion collection
-- `photoshoot-direction.html` — photoshoot direction collection
-- `logo-brand-identity.html` — logo and brand identity collection
+- `/` — exhibition homepage
+- `/graphic-design` — graphic design collection
+- `/video-motion` — video and motion collection
+- `/photoshoot-direction` — photoshoot direction collection
+- `/logo-brand-identity` — logo and brand identity collection
 
-The reference SVG files are retained as design evidence. Runtime pages use semantic HTML, shared CSS, extracted assets, and dedicated composite crops rather than embedding the full reference SVG as an image or background.
+Reference SVG files remain design evidence. Runtime pages use semantic React/TypeScript components, shared CSS, local fonts, extracted raster assets, and dedicated composite crops rather than embedding a full reference SVG as an image or background.
 
-## Local preview
+## Local development
 
 ```bash
-python3 -m http.server 8911
+npm install
+npm run dev
 ```
 
-Then open <http://127.0.0.1:8911/>.
+Open <http://localhost:3000/>. For a production-like server:
+
+```bash
+npm run typecheck
+npm run build
+npm run start -- -p 8931
+```
+
+The existing `assets/` tree is exposed at `/assets/**` through the tracked `public/assets` symlink, so the repository does not duplicate the asset tree.
 
 ## Verification
 
-The implementation was checked with the `fucking-design-cheap` implementation checker and strict browser audit. Generated screenshots and pixel-diff outputs are local-only and ignored under `artifacts/`.
+The migration was verified with:
+
+- `npm run typecheck`
+- `npm run build`
+- HTTP probes for all five canonical routes plus representative font/image assets
+- strict browser interaction audit for all five pages
+- Chromium desktop/mobile DOM checks: all images and fonts loaded, 390px has no horizontal overflow, and category active navigation is correct
+- rendered pixel comparisons against the existing artboard baselines
+
+Generated `.next/` output and screenshots/diffs under `artifacts/` are local-only and ignored by Git.
+
+## Production
+
+- Public: <https://dk.coderkiemcom.com/>
+- Service: `dkcreative-site.service`
+- Origin: `127.0.0.1:8901`
+- Tunnel: `cloudflared-hermes-docs.service`
+- The five canonical routes are live; `.html` paths return `404`.
+- Deployment backup: `/root/dkcreative-site.backup-20260915-165642`

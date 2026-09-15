@@ -44,7 +44,8 @@ body {
   height: var(--responsive-page-height, auto);
   overflow: hidden;
 }
-.artboard-viewport > .artboard {
+.artboard-viewport > .artboard,
+.artboard-viewport > .canvas {
   transform: scale(var(--responsive-scale, 1));
   transform-origin: top left;
 }
