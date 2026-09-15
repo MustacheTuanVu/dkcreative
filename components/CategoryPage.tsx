@@ -16,7 +16,7 @@ export function CategoryPage({ pageHeight, label, active, children }: CategoryPa
     <ResponsiveArtboard>
       <main
         id="top"
-        className="artboard"
+        className={`artboard category-${active}`}
         style={{ '--page-height': `${pageHeight}px` } as CSSProperties}
         aria-label={label}
       >

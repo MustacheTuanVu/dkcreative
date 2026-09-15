@@ -11,13 +11,15 @@ export function ResponsiveArtboard({ children }: ResponsiveArtboardProps) {
 
   useEffect(() => {
     const viewport = viewportRef.current;
-    const stage = viewport?.firstElementChild as HTMLElement | null;
-    if (!viewport || !stage) return;
+    const shell = viewport?.firstElementChild as HTMLElement | null;
+    const stage = shell?.firstElementChild as HTMLElement | null;
+    if (!viewport || !shell || !stage) return;
 
     const sync = () => {
       const baseHeight = stage.offsetHeight;
       if (!baseHeight) return;
-      const scale = Math.max(window.innerWidth, 1) / 1366;
+      const availableWidth = Math.max(viewport.clientWidth, 1);
+      const scale = availableWidth / 1366;
       document.documentElement.style.setProperty('--responsive-scale', String(scale));
       document.documentElement.style.setProperty('--responsive-page-height', `${baseHeight * scale}px`);
     };
@@ -43,7 +45,7 @@ export function ResponsiveArtboard({ children }: ResponsiveArtboardProps) {
 
   return (
     <div className="artboard-viewport" ref={viewportRef}>
-      {children}
+      <div className="artboard-scale-shell">{children}</div>
     </div>
   );
 }

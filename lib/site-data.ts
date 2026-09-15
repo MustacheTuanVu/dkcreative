@@ -7,7 +7,6 @@ export type Space = {
   title: string;
   art: string;
   ariaLabel: string;
-  burst?: boolean;
 };
 
 export const spaces: Space[] = [
@@ -16,34 +15,31 @@ export const spaces: Space[] = [
     href: '/graphic-design',
     name: 'space I',
     title: '2D graphic design',
-    art: '/assets/raster-crops/space_i.png',
+    art: '/assets/live-canva/common/media/51bb448756098490afc68bd5b0fdca09.png',
     ariaLabel: 'Open space I — 2D graphic design',
-    burst: true,
   },
   {
     key: 'space-ii',
     href: '/video-motion',
     name: 'space II',
     title: 'video & motion graphic',
-    art: '/assets/raster-crops/space_ii.png',
+    art: '/assets/live-canva/common/media/2b5997b91d16f29f8ad09b9d4fffc7ce.png',
     ariaLabel: 'Open space II — video and motion graphic',
-    burst: true,
   },
   {
     key: 'space-iii',
     href: '/photoshoot-direction',
     name: 'space III',
     title: 'photoshoot direction',
-    art: '/assets/raster-crops/space_iii.png',
+    art: '/assets/live-canva/common/media/9f264ce4f15a371f39bdb2cf6fce36ef.png',
     ariaLabel: 'Open space III — photoshoot direction',
-    burst: true,
   },
   {
     key: 'space-iv',
     href: '/logo-brand-identity',
     name: 'space IV',
     title: 'logo & brand identity',
-    art: '/assets/raster-crops/space_iv.png',
+    art: '/assets/live-canva/common/media/1c8109f7193837ec5797c18c0f94eacf.png',
     ariaLabel: 'Open space IV — logo and brand identity',
   },
 ];

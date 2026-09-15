@@ -8,30 +8,66 @@
   --muted: #6c3c29;
   --footer-bg: #000;
   --footer-ink: #fff;
-  --body-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --body-font: "Canva Live Heading", Arial, sans-serif;
 }
 
 @font-face {
-  font-family: "Baloo 2";
+  font-family: "Canva Live Heading";
   font-style: normal;
-  font-weight: 800;
-  src: url("assets/fonts/display/baloo-2-800.ttf") format("truetype");
+  font-weight: 400;
+  src: url("/assets/live-canva/fonts/35dddeb8058123f37307d877606a5386.woff2") format("woff2");
   font-display: swap;
 }
-
+@font-face {
+  font-family: "Canva Live Heading";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/live-canva/fonts/a1e542912e4fd79f1461e71b949ab1d1.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Canva Live Heading";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/assets/live-canva/fonts/4e606088828d77f4133453479c70388c.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Canva Live Title";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/live-canva/fonts/5b1f010b326e4a6432db4ceaf1120e26.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Canva Live Body";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/live-canva/fonts/8461fcb69f64bc53c83df66f88d997e5.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Canva Live Body";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/live-canva/fonts/6f33b662dba0705347f24c030f2a9c18.woff") format("woff");
+  font-display: swap;
+}
 * { box-sizing: border-box; }
 html {
   width: 100%;
   min-width: 0;
-  overflow-x: hidden;
+  height: 100%;
+  overflow: hidden;
   background: #fff;
   scroll-behavior: auto;
 }
 body {
   width: 100%;
   min-width: 0;
+  height: 100%;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   background: #fff;
   color: var(--ink);
   font-family: var(--body-font);
@@ -41,11 +77,18 @@ body {
   position: relative;
   width: 100vw;
   max-width: 100vw;
-  height: var(--responsive-page-height, auto);
-  overflow: hidden;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-.artboard-viewport > .artboard,
-.artboard-viewport > .canvas {
+.artboard-scale-shell {
+  position: relative;
+  width: calc(var(--artboard-width, var(--canvas-width)) * var(--responsive-scale, 1));
+  height: var(--responsive-page-height, var(--page-height, var(--canvas-height)));
+}
+.artboard-scale-shell > .artboard,
+.artboard-scale-shell > .canvas {
   transform: scale(var(--responsive-scale, 1));
   transform-origin: top left;
 }
@@ -477,3 +520,95 @@ img { display: block; }
 }
 .brand-dark { top: 471px; height: 1196px; }
 .brand-light { top: 1667px; height: 1303px; background: #fff; }
+
+/* Live Canva geometry overrides. Keep the fixed artboard model; match the
+   measured 1366px reference instead of reflowing the composition. */
+.header-band { top: 0; }
+.header-divider {
+  position: absolute;
+  top: 469.97px;
+  left: 0;
+  display: block;
+  width: var(--artboard-width);
+  height: 2px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #000;
+  opacity: .5;
+  pointer-events: none;
+}
+.header-band .space-card { top: 349.4px; }
+.header-band .space-card .space-copy { top: 6px; }
+.header-band .space-name { font-size: 14px; line-height: 18.4px; }
+.header-band .space-title { font-size: 18px; line-height: 22px; }
+.header-band .space-status { top: 0; font-size: 15px; line-height: 17px; }
+.header-band .space-i { left: 83.9px; width: 224px; }
+.header-band .space-i .space-art { top: -3.7px; left: -71px; width: 61.1px; height: 61.1px; }
+.header-band .space-ii { left: 417.3px; width: 264px; }
+.header-band .space-ii .space-art { top: 5px; left: -63.4px; width: 45.9px; height: 43.7px; }
+.header-band .space-iii { left: 788.9px; width: 265px; }
+.header-band .space-iii .space-art { top: 5px; left: -62px; width: 43.1px; height: 43.1px; }
+.header-band .space-iv { left: 1163.2px; width: 184px; }
+.header-band .space-iv .space-art { top: -0.9px; left: -68.3px; width: 55.4px; height: 54.5px; }
+
+.site-footer {
+  top: calc(var(--page-height) - 257px);
+  height: 257px;
+}
+.site-footer .footer-contact { top: 72px; left: 22.2px; }
+.site-footer .footer-contact h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  line-height: 25px;
+}
+.site-footer .footer-row {
+  height: 33px;
+  font-size: 15px;
+  line-height: 20px;
+}
+.site-footer .footer-row img { margin-left: .8px; }
+.site-footer .footer-row .label { margin-left: 9.3px; }
+.site-footer .back-to-top {
+  top: 99px;
+  right: 17.7px;
+  width: 82px;
+  height: 84px;
+}
+.site-footer .back-to-top img {
+  width: 59.8px;
+  height: 59.8px;
+  margin-left: 7px;
+}
+.site-footer .back-to-top span { margin-top: -14.3px; line-height: 20px; }
+
+.graphic-c1 { height: 910px; }
+.graphic-c2 { top: 1382px; }
+.graphic-c2 .collection-copy { top: 44px; }
+.video-c1 { top: 470px; height: 1292px; }
+.video-c1 .collection-copy { top: 44px; }
+.video-c3 { top: 2620px; height: 1436px; }
+.video-c3 .collection-copy { top: 44px; }
+.brand-dark { top: 470px; height: 1195px; }
+.brand-dark .collection-copy { top: 43.5px; }
+.brand-light { top: 1665px; height: 1303px; }
+.brand-icons { top: -21.6px; }
+.palette-grid { grid-template-columns: repeat(4, 148px); gap: 11.6px; }
+.graphic-c1 .collection-copy { top: 41.5px; }
+.graphic-c2 .collection-copy { top: 43.5px; }
+.graphic-c3 .collection-copy { top: 40.5px; }
+.video-c1 .collection-copy { top: 43.5px; }
+.video-c2 .collection-copy { top: 41.5px; }
+.video-c3 .collection-copy { top: 43.5px; }
+
+.canva-video {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.canva-video > .media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}

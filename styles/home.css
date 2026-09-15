@@ -2,7 +2,7 @@
         --ink: #000000;
         --accent: #6c3c29;
         --canvas-width: 1366px;
-        --canvas-height: 1464px;
+        --canvas-height: 1497px;
         --font-sans: Arial, "Helvetica Neue", Helvetica, sans-serif;
       }
 
@@ -16,7 +16,8 @@
       html {
         width: 100%;
         min-width: 0;
-        overflow-x: hidden;
+        height: 100%;
+        overflow: hidden;
         scroll-behavior: auto;
         background: #fff;
       }
@@ -24,8 +25,9 @@
       body {
         width: 100%;
         min-width: 0;
+        height: 100%;
         margin: 0;
-        overflow-x: hidden;
+        overflow: hidden;
         background: #fff;
         color: var(--ink);
         font-family: var(--font-sans);
@@ -36,11 +38,20 @@
         position: relative;
         width: 100vw;
         max-width: 100vw;
-        height: var(--responsive-page-height, auto);
-        overflow: hidden;
+        height: 100vh;
+        max-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: scroll;
       }
 
-      .artboard-viewport > .canvas {
+      .artboard-scale-shell {
+        position: relative;
+        width: calc(var(--canvas-width, var(--artboard-width)) * var(--responsive-scale, 1));
+        height: var(--responsive-page-height, var(--canvas-height, var(--page-height)));
+      }
+
+      .artboard-scale-shell > .artboard,
+      .artboard-scale-shell > .canvas {
         transform: scale(var(--responsive-scale, 1));
         transform-origin: top left;
       }
@@ -126,8 +137,8 @@
         font-style: normal;
       }
 
-      .intro > span:first-child { letter-spacing: 0.2px; }
-      .intro .update { letter-spacing: 0.12px; }
+      .intro > span:first-child { letter-spacing: normal; }
+      .intro .update { letter-spacing: normal; }
 
       .space-card {
         position: absolute;
@@ -342,7 +353,7 @@
       }
 
       .about-phone {
-        top: 204px;
+        top: 205.94px;
         left: -0.315px;
       }
 
@@ -357,7 +368,7 @@
       }
 
       .about-email {
-        top: 202.366px;
+        top: 205.806px;
         left: 213.028px;
       }
 
@@ -688,4 +699,402 @@
 
       .interactive-link:hover {
         background: transparent;
+      }
+
+      /* Homepage live Canva geometry. Canva shifts this header lower on the
+         initial top-of-page state; the portfolio body stays on its fixed grid. */
+      .canvas {
+        height: 1497px;
+        background: linear-gradient(to bottom, #fff 0 1462px, #000 1462px 1497px);
+      }
+      .canvas .display-title { top: 109.4px; }
+      .canvas .intro { top: 233.25px; }
+      .canvas .space-card .space-name { font-size: 14px; line-height: 18.4px; }
+      .canvas .space-card .space-title { font-size: 18px; line-height: 22px; }
+      .canvas .space-card .space-status { top: 0; font-size: 15px; line-height: 17px; }
+      .canvas .space-i { top: 349.4px; left: 83.9px; width: 224px; }
+      .canvas .space-i .space-copy { top: 6px; }
+      .canvas .space-i .space-art { top: -3.7px; left: -71px; width: 61.1px; height: 61.1px; }
+      .canvas .space-ii { top: 349.4px; left: 417.3px; width: 264px; }
+      .canvas .space-ii .space-copy { top: 6px; }
+      .canvas .space-ii .space-art { top: 5px; left: -63.4px; width: 45.9px; height: 43.7px; }
+      .canvas .space-iii { top: 349.4px; left: 788.9px; width: 265px; }
+      .canvas .space-iii .space-copy { top: 6px; }
+      .canvas .space-iii .space-art { top: 5px; left: -62px; width: 43.1px; height: 43.1px; }
+      .canvas .space-iv { top: 349.4px; left: 1163.2px; width: 184px; }
+      .canvas .space-iv .space-copy { top: 6px; }
+      .canvas .space-iv .space-art { top: -0.9px; left: -68.3px; width: 55.4px; height: 54.5px; }
+
+      .canvas .portrait-frame {
+        top: 564.712px;
+        left: 20.741px;
+        width: 351.234px;
+        height: 342.766px;
+      }
+      .canvas .portrait {
+        top: -116.677px;
+        left: 0;
+        width: 372.578px;
+        height: 559.203px;
+      }
+      .canvas .about-block { top: 561.8px; }
+      .canvas .education-block { top: 816.8px; }
+      .canvas .experience-block { top: 563px; }
+      .canvas .software-block { top: 794.2px; }
+      .canvas .software-icons .ps { top: 18.2px; left: .8px; width: 55.8px; height: 54.4px; }
+      .canvas .software-icons .ai { top: 18.2px; left: 70.5px; width: 54.6px; height: 54.6px; }
+      .canvas .software-icons .pr { top: 18.2px; left: 138.8px; width: 56px; height: 54.6px; }
+      .canvas .software-icons .figma { top: .4px; left: 191.1px; width: 90.8px; height: 90.8px; }
+      .canvas .software-icons .capcut { top: 18.2px; left: 278px; width: 55.4px; height: 55.4px; }
+      .canvas .client-knauf { left: 20.7px; top: 957.6px; width: 69.9px; height: 46.3px; }
+      .canvas .client-sony { left: 137.1px; top: 972.1px; width: 98.3px; height: 17.3px; }
+      .canvas .client-vita { left: 281.9px; top: 954.1px; width: 155.3px; height: 53.4px; }
+      .canvas .client-fpt { left: 483.7px; top: 948.5px; width: 158.2px; height: 64.5px; }
+      .canvas .client-uob { left: 688.4px; top: 965.9px; width: 106.1px; height: 29.7px; }
+      .canvas .client-rung { left: 841px; top: 931.4px; width: 107.2px; height: 107.2px; }
+      .canvas .client-baemin { left: 983.4px; top: 962.4px; width: 153.8px; height: 36.7px; }
+      .canvas .client-vng { left: 1173.1px; top: 968.7px; width: 171.2px; height: 24.2px; }
+      .canvas .call-block { top: 1169.6px; }
+      .canvas .call-block h2 { line-height: 54px; }
+      .canvas .footer-contact { top: 118.3px; }
+      .canvas .footer-contact:not(.footer-email) { top: 119.5px; }
+      .canvas .shortcut-block { top: 1174.3px; }
+      .canvas .back-to-top img { width: 59.8px; height: 59.8px; }
+
+      /* Keep category navigation overrides after the extracted homepage CSS.
+         Both stylesheets are global, and this file is imported last. */
+      .header-band .display-title { top: 109.4px; }
+      .header-band .intro { top: 233.25px; }
+      .header-band .space-card .space-copy { top: 6.97px; }
+      .header-band .space-name { font-size: 14px; line-height: 18.4px; }
+      .header-band .space-title { font-size: 18px; line-height: 22px; }
+      .header-band .space-status { top: 0; font-size: 15px; line-height: 17px; }
+
+      /* Canva live font stack and text metrics. */
+      .artboard,
+      .canvas {
+        font-family: "Canva Live Heading", Arial, sans-serif;
+      }
+      .display-title {
+        top: 0 !important;
+        height: 255px;
+        font-family: "Canva Live Heading", Arial, sans-serif;
+        font-size: 67.1169px;
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 93px;
+      }
+      .display-title > span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: block;
+        white-space: nowrap;
+      }
+      .display-title > .title-line-one { top: 100.584px; }
+      .display-title > .title-line-two { top: 162.389px; letter-spacing: 0; }
+      .intro {
+        font-family: "Canva Live Body", Arial, sans-serif;
+        font-size: 13.3333px;
+        line-height: 18px;
+      }
+      .space-card .space-name,
+      .space-card .space-title,
+      .space-card .space-status {
+        font-family: "Canva Live Heading", Arial, sans-serif;
+      }
+      .space-card .space-name { font-size: 15.933px; line-height: 18px; }
+      .space-card .space-title { font-size: 16.7714px; line-height: 18.3px; letter-spacing: 0; }
+      .space-card .space-status { font-size: 13.3609px; line-height: 18px; }
+      .collection-eyebrow,
+      .collection-meta,
+      .collection-meta .meta-heading {
+        font-family: "Canva Live Heading", Arial, sans-serif;
+      }
+      .collection-eyebrow { font-size: 13.3333px; line-height: 18px; }
+      .collection-title {
+        font-family: "Canva Live Title", "Times New Roman", serif;
+        font-size: 31.2149px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 34px;
+      }
+      .collection-meta {
+        font-size: 13.3333px;
+        line-height: 18px;
+      }
+      .collection-meta .meta-heading { font-size: 13.3333px; font-weight: 700; }
+      .collection-meta > div > p:not(.meta-heading),
+      .collection-meta .copy-line {
+        font-family: "Canva Live Body", Arial, sans-serif;
+        font-weight: 400;
+      }
+      .concept-block,
+      .concept-block h3,
+      .concept-block p,
+      .scenario strong,
+      .scenario span,
+      .kol-caption,
+      .kol-caption strong,
+      .brand-system,
+      .brand-imagery,
+      .site-footer {
+        font-family: "Canva Live Body", Arial, sans-serif;
+      }
+
+      /* Home live Canva text metrics. */
+      .canvas .about-block h2,
+      .canvas .education-block h2,
+      .canvas .experience-block h2,
+      .canvas .software-block h2,
+      .canvas .shortcut-block h2 {
+        font-family: "Canva Live Heading", Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: normal;
+        transform: none;
+      }
+      .canvas .about-line,
+      .canvas .education-block .edu-row,
+      .canvas .experience-block .experience-row,
+      .canvas .software-block .role,
+      .canvas .software-block .date,
+      .canvas .shortcut-list {
+        font-family: "Canva Live Body", Arial, sans-serif;
+        font-size: 13.3333px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: normal;
+        transform: none;
+      }
+      .canvas .education-block .edu-row strong,
+      .canvas .experience-block .experience-row strong,
+      .canvas .software-block .role strong {
+        font-family: "Canva Live Body", Arial, sans-serif;
+        font-weight: 700;
+      }
+      .canvas .call-block {
+        left: 21.351px;
+      }
+      .canvas .call-block h2 {
+        font-family: "Canva Live Heading", Arial, sans-serif;
+        font-size: 50.1333px;
+        font-weight: 700;
+        line-height: 54px;
+        letter-spacing: normal;
+        transform: none;
+      }
+      .canvas .shortcut-list a {
+        font-family: "Canva Live Body", Arial, sans-serif;
+      }
+      .canvas .space-card .space-name { font-size: 15.933px; line-height: 18px; }
+      .canvas .space-card .space-title { font-size: 16.7714px; line-height: 18.3px; }
+      .canvas .space-card .space-status { font-size: 13.3609px; line-height: 18px; }
+      .call-block h2,
+      .shortcut-block h2,
+      .shortcut-list,
+      .footer-contact,
+      .back-to-top {
+        font-family: "Canva Live Heading", Arial, sans-serif;
+      }
+      .display-title > .title-line-one {
+        transform: scaleX(.7556);
+        transform-origin: center top;
+      }
+      .display-title > .title-line-two {
+        transform: scale(.74776);
+        transform-origin: center top;
+      }
+      .space-card .space-name { position: relative; top: 1px; transform: scaleX(.8196); transform-origin: left center; }
+      .space-card .space-title { position: relative; top: 2.55px; transform: scaleX(.978); transform-origin: left center; }
+      .space-card .space-status { top: 4.16px; transform: scaleX(1.035); transform-origin: left center; }
+      .canvas .space-card .space-status { top: 4.16px; }
+      .collection-copy { left: 20.741px; }
+      .collection-meta {
+        left: .61px;
+        grid-template-columns: 497.982px 154.786px 300px;
+      }
+      .collection-title { margin-top: 5.06px; }
+      .collection-meta .meta-heading { margin-bottom: 7px; }
+      .collection-meta > div > p:not(.meta-heading),
+      .collection-meta .copy-line {
+        transform: scaleX(1.024);
+        transform-origin: left center;
+      }
+      .intro {
+        font-family: "Canva Live Body", Arial, sans-serif;
+        font-size: 13.3333px;
+        line-height: 18px;
+        letter-spacing: normal;
+      }
+      .collection-eyebrow,
+      .collection-meta .meta-heading {
+        font-family: "Canva Live Heading", Arial, sans-serif;
+        font-size: 13.3333px;
+        line-height: 18px;
+      }
+      .collection-title {
+        font-family: "Canva Live Title", "Times New Roman", serif;
+        font-size: 31.2149px;
+        font-weight: 400;
+        line-height: 34px;
+        letter-spacing: normal;
+      }
+      .collection-meta {
+        font-family: "Canva Live Heading", Arial, sans-serif;
+        font-size: 13.3333px;
+        line-height: 18px;
+      }
+      .collection-meta > div > p:not(.meta-heading) {
+        font-family: "Canva Live Body", Arial, sans-serif;
+        font-weight: 400;
+      }
+      .collection-meta strong {
+        font-family: "Canva Live Body", Arial, sans-serif;
+        font-weight: 700;
+      }
+
+      /* Canva shared chrome: scroll the viewport, not html/body. */
+      .canvas > .header-band {
+        background: transparent;
+      }
+      .header-divider {
+        position: absolute;
+        top: 469.97px;
+        left: 0;
+        display: block;
+        width: var(--artboard-width, var(--canvas-width));
+        height: 2px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: #000;
+        opacity: .5;
+        pointer-events: none;
+      }
+
+      /* Category footer geometry/type measured from Canva after bottom scroll. */
+      .artboard > .site-footer {
+        top: calc(var(--page-height) - 257px);
+        height: 257px;
+      }
+      .artboard > .site-footer .footer-contact {
+        top: 72px;
+        left: 22.2px;
+        font-family: "Canva Live Body", Arial, sans-serif;
+        letter-spacing: normal;
+      }
+      .artboard > .site-footer .footer-contact h2 {
+        width: max-content;
+        margin: 0;
+        font-family: "Canva Live Heading", Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: normal;
+      }
+      .artboard > .site-footer .footer-row {
+        position: absolute;
+        left: 0;
+        display: flex;
+        align-items: flex-start;
+        height: 20px;
+        font-family: "Canva Live Body", Arial, sans-serif;
+        font-size: 14.6667px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: normal;
+        white-space: nowrap;
+      }
+      .artboard > .site-footer .footer-contact a:nth-of-type(1) { top: 39px; }
+      .artboard > .site-footer .footer-contact a:nth-of-type(2) { top: 71.7px; }
+      .artboard > .site-footer .footer-row img {
+        flex: 0 0 auto;
+        object-fit: fill;
+        filter: invert(1);
+      }
+      .artboard > .site-footer .footer-contact a:nth-of-type(1) img {
+        width: 18.84px;
+        height: 18.84px;
+        margin-left: .76px;
+      }
+      .artboard > .site-footer .footer-contact a:nth-of-type(2) img {
+        width: 19.61px;
+        height: 19.61px;
+        margin-left: 0;
+      }
+      .artboard > .site-footer .footer-row .label {
+        display: block;
+        margin-left: 9.33px;
+        letter-spacing: normal;
+      }
+      .artboard > .site-footer .back-to-top {
+        top: 99px;
+        right: 17.7px;
+        width: 82px;
+        height: 84px;
+        font-family: "Canva Live Body", Arial, sans-serif;
+        letter-spacing: normal;
+      }
+      .artboard > .site-footer .back-to-top img {
+        position: relative;
+        top: .32px;
+        width: 59.8px;
+        height: 59.8px;
+        margin-left: 14px;
+        object-fit: fill;
+        filter: invert(1);
+      }
+      .artboard > .site-footer .back-to-top span {
+        position: absolute;
+        top: 44.44px;
+        left: 4.02px;
+        display: block;
+        width: max-content;
+        margin: 0;
+        font-family: "Canva Live Body", Arial, sans-serif;
+        font-size: 14.6667px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: normal;
+      }
+      .artboard.category-space-i > .site-footer .back-to-top span { left: -3px; }
+      .artboard.category-space-i > .site-footer .back-to-top img { margin-left: 7px; }
+      .artboard.category-space-ii > .site-footer .back-to-top img,
+      .artboard.category-space-iii > .site-footer .back-to-top img,
+      .artboard.category-space-iv > .site-footer .back-to-top img { margin-left: 14px; }
+
+      /* Homepage back-to-top uses Canva's wider body-text label block. */
+      .canvas .back-to-top {
+        top: 182.77px;
+        right: -3.99px;
+        width: 133.39px;
+        height: 84px;
+        text-align: center;
+        font-family: "Canva Live Body", Arial, sans-serif;
+        letter-spacing: normal;
+      }
+      .canvas .back-to-top img {
+        position: relative;
+        top: 1.19px;
+        width: 59.8px;
+        height: 59.8px;
+        margin-left: 36.79px;
+        object-fit: fill;
+      }
+      .canvas .back-to-top span {
+        position: absolute;
+        top: 44.44px;
+        left: 0;
+        display: block;
+        width: 100%;
+        margin: 0;
+        font-family: "Canva Live Body", Arial, sans-serif;
+        font-size: 14.6667px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: normal;
+        white-space: nowrap;
       }

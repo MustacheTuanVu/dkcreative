@@ -11,6 +11,7 @@ export function ExhibitionHeader({ active }: { active?: SpaceKey }) {
         <span className="update">* Established since 2021 , last update in 2026 *</span>
       </p>
       <SpaceNavigation active={active} />
+      <hr className="header-divider" aria-hidden="true" />
     </header>
   );
 }

@@ -3,7 +3,7 @@ import { CollectionCopy } from '../../components/CollectionCopy';
 
 export function PhotoshootDirectionPage() {
   return (
-    <CategoryPage pageHeight={2777} label="Photoshoot direction portfolio" active="space-iii">
+    <CategoryPage pageHeight={2809} label="Photoshoot direction portfolio" active="space-iii">
       <section className="collection-band photo-c1" aria-labelledby="photo-title">
         <CollectionCopy
           eyebrow="collection VII"

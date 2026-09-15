@@ -19,9 +19,8 @@ export function SpaceNavigation({ active }: { active?: SpaceKey }) {
             <span className="space-copy">
               <span className="space-name">{space.name}</span>
               <span className="space-title">{space.title}</span>
-              <span className="space-status">{isCurrent ? 'you are here!' : 'now on view'}</span>
+              <span className="space-status">{isCurrent ? 'you are here !' : 'now on view'}</span>
             </span>
-            {space.burst ? <span className="burst" aria-hidden="true">✳</span> : null}
           </Link>
         );
       })}
